@@ -31,22 +31,24 @@ def inject_global_variables():
     domain = config['configs']['domain']
     email = config['configs']['email']
     your_name = config['configs']['your_name']
+    occupation = config['configs']['occupation']
     github = config['configs']['github']
     blog_comments = config['configs']['blog_comments']
     hubspot = config['configs']['hubspot']
     linkedin = config['configs']['linkedin']
-    twitter = config['configs']['twitter']
+    bluesky = config['configs']['bluesky']
     current_year = datetime.now().year
 
     return {
         'domain': domain,
         'email': email,
         'your_name': your_name,
+        'occupation': occupation,
         'github': github,
         'blog_comments': blog_comments,
         'hubspot': hubspot,
         'linkedin': linkedin,
-        'twitter': twitter,
+        'bluesky': bluesky,
         'current_year': current_year
     }
 
