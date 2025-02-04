@@ -48,7 +48,8 @@
           <div class="collapse navbar-collapse" id="navbar">
             <div class="navbar-nav ml-auto">
               <a href="/" class="nav-item nav-link" id="home">home</a>
-              <a href="https://rxresu.me/dnell.personal/danienellcom" class="nav-item nav-link" id="resume">resume</a>
+              <!-- <a href="https://rxresu.me/dnell.personal/danienellcom" class="nav-item nav-link" id="resume">resume</a> -->
+              <a href="/resume" class="nav-item nav-link" id="resume">resume</a>
               <!-- <a href="/about " class="nav-item nav-link" id="about ">about</a> -->
               <a href="/projects" class="nav-item nav-link" id="projects">projects</a>
               <a href="/blog" class="nav-item nav-link" id="blog">blog</a>
@@ -57,19 +58,21 @@
         </nav>
       </div>
 
-        <!-- <a href="https://{{ domain }}">
-          <img
-            src="{{ url_for('static', filename='images/headshot.jpg') }}"
-            class="img-thumbnail rounded-circle"
-            alt="{{your_name}}"
-            width="100"
-            height="100" />
-        </a> -->
-      
-      <div class="container text-center">
-        <h1 class="p-3">{{your_name}} - <i>{{occupation}}</i></h1>
-        <div class="nav-line"></div>
-      </div>
+        <div class="container d-flex align-items-center justify-content-center my-4">
+          <a href="https://{{ domain }}">
+            <img
+          src="{{ url_for('static', filename='images/headshot.jpg') }}"
+          class="img-thumbnail rounded-circle mr-4"
+          alt="{{your_name}}"
+          width="100"
+          height="100" />
+          </a>
+          
+          <div>
+            <h1 class="mb-0">{{your_name}} - <i>{{occupation}}</i></h1>
+            <div class="nav-line"></div>
+          </div>
+        </div>
 
       
       <div class="container">{% block content%} {% endblock %}</div>
