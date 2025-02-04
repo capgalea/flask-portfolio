@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block title %}Resume{% endblock %}
+{% block content %}
+    <div class="image-container"></div>
+        <img src="{{ url_for('static', filename='images/1.png') }}" alt="First Image">
+        <img src="{{ url_for('static', filename='images/2.png') }}" alt="Second Image">
+        <img src="{{ url_for('static', filename='images/3.png') }}" alt="Third Image">
+    </div>
+
+    <style>
+        .image-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+    <div class="download-container">
+        <a href="{{ url_for('static', filename='resume.pdf') }}" class="download-button" download>
+            Download Resume PDF
+        </a>
+    </div>
+
+    <style>
+        .download-container {
+            text-align: center;
+            margin: 20px;
+        }
+        .download-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .download-button:hover {
+            background-color: #d3d3d3;
+        }
+    </style>
+{% endblock %}
