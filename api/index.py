@@ -145,5 +145,5 @@ def get_latest_posts(limit=10):
     latest = sorted(filtered_posts, reverse=True, key=lambda p: getattr(p, "meta").get('date'))
     return latest[:limit]
 
-# if __name__ == "__main__":
-#     app.run(host='0.0.0.0', port=6000)
+if __name__ == "__main__":
+    app.run(host='0.0.0.0', port=6000)
