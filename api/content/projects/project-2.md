@@ -1,7 +1,7 @@
-title: Flask CRUD app
-shortDesc: Flask Application to do simple Create, Read, Update and Delete on a database.
-date: 2023-04-25
-tech: Python, Flask, Bootstrap, Postgres, Docker
-codeLink: https://github.com/buildwithdan/flask-crud
-selfHost: https://crud.buildwithdan.com/
-dockerLink: https://hub.docker.com/r/buildwithdan/flask-crud
+title: Streamlit Aus Biotech Survey app (in development)
+shortDesc: Streamlit Application allowing users to search for Australian Biotechnology Information.
+date: 2025-02-05 
+tech: Python, Streamlit, LLM, Docker
+codeLink: https://github.com/capgalea/ausbio_streamlit_LLM
+selfHost: https://citytreesapp-wpriqxrgfgpmc2woh3gyaf.streamlit.app/
+dockerLink: https://hub.docker.com/repository/docker/capgalea968/citytrees_streamlit/general
