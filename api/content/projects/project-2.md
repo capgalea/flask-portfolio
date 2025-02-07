@@ -1,7 +1,7 @@
-title: Streamlit Aus Biotech Survey app (in development)
-shortDesc: Streamlit Application allowing users to search for Australian Biotechnology Information.
+title: Biotech Survey app
+shortDesc: Streamlit Application allowing users to search Biotech information such as Patents, Clinical Trials, Drug Pipline data. (includes ChatBot trained on Australian Biotech data)
 date: 2025-02-05 
-tech: Python, Streamlit, LLM, Docker
+tech: Python, Streamlit, LLM, Docker, API
 codeLink: https://github.com/capgalea/ausbio_streamlit_LLM
-selfHost: https://citytreesapp-wpriqxrgfgpmc2woh3gyaf.streamlit.app/
-dockerLink: https://hub.docker.com/repository/docker/capgalea968/citytrees_streamlit/general
+selfHost: https://ausbioappllm-chtf78hmzshyp7wngn7yzh.streamlit.app/
+dockerLink: https://hub.docker.com/repository/docker/capgalea968/ausbio-streamlit-app/general
