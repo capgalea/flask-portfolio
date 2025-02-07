@@ -146,4 +146,6 @@ def get_latest_posts(limit=10):
     return latest[:limit]
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=6000)
+    # app.run(debug=True)
+    # app.run(host='0.0.0.0', port=6000)
+    app.run()
