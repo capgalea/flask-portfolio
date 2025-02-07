@@ -1,32 +1,31 @@
-title: Everyday Tech for Coding, Music, and Beyond
-date: 2023-06-20
+title: Tech for Coding and Handling Big Data
+date: 2025-02-07
 published: True
 
-In this post, I'm sharing the tech setup that supports my everyday activities from coding to listening to music.
+In this post, I'm sharing the tools that I use for wrangling and visualising data.
 
-## Everyday Carry (EDC) Tech
+## Programming Languages
 
-- Apple iPhone 13 ProMax
-- 13" M1 Macbook Air
-- Bose Soundlink AE2
-- SteelSeries Rival 3 Wireless mouse
-- Apple Airpods
-- Garmin Forerunner 945
-- CRKT Carson M16-14SF
+- Python
+- R
+- SQL
 
-## My Coding Tools
+## My Data Software
 
-- Editor: VSCode
-- Theme: One Dark Pro
-- Terminal: Hyper / zsh
+- Editors: VSCode, RStudio
+- Dashboards: Streamlit, Flask, RShiny, Qlik Sense
+- Data Wrangling: Alteryx
+- Process Automation: Selenium (Python package)
 
-## Essential Software
+## Othe Essential Software
 
-- Bitwarden (for secure password management)
 - Spotify (music streaming)
 - Gmail (personal email)
-- Xero (personal and business finances)
-- Google Team Drives (for all cloud storage needs)
-- Plex (media streaming)
-- Notion (my digital second brain)
+- Google Team Drives and OneDrive (for all cloud storage needs)
+- Notebook
 - Google Chrome Browser
+- Zoom (Web meetings)
+- Canva 
+- Docker
+- GIMP (like photoshop but free)
+- GitHub desktop (version control)
