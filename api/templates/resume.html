@@ -2,9 +2,9 @@
 {% block title %}Resume{% endblock %}
 {% block content %}
     <div class="image-container"></div>
-        <img src="{{ url_for('static', filename='images/') }}" alt="First Image">
+        <img src="{{ url_for('static', filename='images/1.png') }}" alt="First Image">
         <img src="{{ url_for('static', filename='images/2.png') }}" alt="Second Image">
-        <img src="{{ url_for('static', filename='images/') }}" alt="Third Image">
+        <img src="{{ url_for('static', filename='images/3.png') }}" alt="Third Image">
     </div>
 
     <style>
@@ -21,8 +21,26 @@
         }
     </style>
     <div class="download-container">
-        <a href="{{ url_for('static', filename='resume.pdf') }}" class="download-button" download>
-            Download Resume PDF
+        <a href="#" class="download-button" onclick="downloadAll()">
+            Download Resume
+        </a>
+        <script>
+            function downloadAll() {
+            const images = [
+                "{{ url_for('static', filename='images/1.png') }}",
+                "{{ url_for('static', filename='images/2.png') }}",
+                "{{ url_for('static', filename='images/3.png') }}"
+            ];
+            images.forEach((url, index) => {
+                const link = document.createElement('a');
+                link.href = url;
+                link.download = `image${index + 1}.png`;
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            });
+            }
+        </script>
         </a>
     </div>
 
