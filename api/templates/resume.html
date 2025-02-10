@@ -1,8 +1,10 @@
 {% extends "base.html" %}
 {% block title %}Resume{% endblock %}
 {% block content %}
-    <div class="image-container">
-        <embed src="{{ https://github.com/capgalea/flask-portfolio/tree/simple/api/static/images('static', filename='Charles Galea_Resume.pdf') }}" type="application/pdf" width="100%" height="600px">
+    <div class="image-container"></div>
+        <img src="{{ url_for('static', filename='images/1.png') }}" alt="First Image">
+        <img src="{{ url_for('static', filename='images/2.png') }}" alt="Second Image">
+        <img src="{{ url_for('static', filename='images/3.png') }}" alt="Third Image">
     </div>
 
     <style>
@@ -19,24 +21,38 @@
         }
     </style>
     <div class="download-container">
-        <a href="#" class="download-button" onclick="downloadAll()">
+        <a href="#" class="download-button" onclick="downloadAsPDF()"></a>
             Download Resume
         </a>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
         <script>
-            function downloadAll() {
-            const images = [
-                "{{ url_for('static', filename='images/1.png') }}",
-                "{{ url_for('static', filename='images/2.png') }}",
-                "{{ url_for('static', filename='images/3.png') }}"
-            ];
-            images.forEach((url, index) => {
-                const link = document.createElement('a');
-                link.href = url;
-                link.download = `image${index + 1}.png`;
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-            });
+            async function downloadAsPDF() {
+                const { jsPDF } = window.jspdf;
+                const doc = new jsPDF();
+                const images = [
+                    "{{ url_for('static', filename='images/1.png') }}",
+                    "{{ url_for('static', filename='images/2.png') }}",
+                    "{{ url_for('static', filename='images/3.png') }}"
+                ];
+
+                for (let i = 0; i < images.length; i++) {
+                    const img = await loadImage(images[i]);
+                    const imgWidth = doc.internal.pageSize.getWidth();
+                    const imgHeight = (img.height * imgWidth) / img.width;
+                    
+                    if (i > 0) doc.addPage();
+                    doc.addImage(img, 'PNG', 0, 0, imgWidth, imgHeight);
+                }
+
+                doc.save('resume.pdf');
+            }
+
+            function loadImage(url) {
+                return new Promise((resolve) => {
+                    const img = new Image();
+                    img.onload = () => resolve(img);
+                    img.src = url;
+                });
             }
         </script>
         </a>
