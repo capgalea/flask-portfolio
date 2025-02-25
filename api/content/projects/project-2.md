@@ -3,5 +3,5 @@ shortDesc: Streamlit Application allowing users to search Biotech information su
 date: 2025-02-05 
 tech: Python, Streamlit, LLM, Docker, API
 codeLink: https://github.com/capgalea/ausbio_streamlit_LLM
-selfHost: https://ausbioappllm-chtf78hmzshyp7wngn7yzh.streamlit.app/
+selfHost: https://v0-oz-bio-tech-web-page.vercel.app/
 dockerLink: https://hub.docker.com/repository/docker/capgalea968/ausbio-streamlit-app/general
