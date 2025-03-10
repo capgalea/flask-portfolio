@@ -1,0 +1,8 @@
+.git
+.DS_Store
+__pycache__
+*.pyc
+*.log
+venv
+test_env
+node_modules
